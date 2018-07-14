@@ -1,0 +1,144 @@
+﻿<Window x:Class="ShirtBiz.Views.CustomerTab"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShirtBiz.Views"
+        mc:Ignorable="d"
+         Title="Customer Tables" Height="1000" Width="400" >
+
+    <Border Padding="10">
+
+        <StackPanel>
+            <Grid>
+                <Grid.Background>
+                    <ImageBrush ImageSource="/Assets/shirts.jpg"/>
+                </Grid.Background>
+            </Grid>
+
+            <!--Buttons-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="ApplyBtn" Margin="0 0 10 0" Grid.Column="0" Content="Apply" Click="Button_Click"/>
+                <Button x:Name="ResetBtn" Grid.Column="1" Content="Reset"/>
+                <Button x:Name="RefreshBtn" Margin="10 0 0 0" Grid.Column="2" Content="Refresh"/>
+            </Grid>
+            <TextBlock Text="Shirt size" FontWeight="Bold" Margin="0 10"/>
+
+            <TextBlock Text="Properties" FontWeight="Bold" Margin="0 10"/>
+
+            <!--Description-->
+            <TextBlock x:Name="DescriptionText" Text="Description"/>
+            <TextBox Padding="2"/>
+
+            <!--Orders-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--View Orders-->
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="View Orders"/>
+                    <TextBox IsReadOnly="True" Background="#eee" Padding="2"/>
+                </StackPanel>
+
+                <!--Cancel Orders-->
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="Cancel Order"/>
+                    <TextBox IsReadOnly="True" Background="#eee" Padding="2"/>
+                </StackPanel>
+            </Grid>
+
+            <!--Order Number-->
+            <TextBlock Text="Order Number"/>
+            <TextBox Padding="2"/>
+
+            <!--Raw Material-->
+
+            <TextBlock Text="Raw Material" FontWeight="Bold" Margin="0 10"/>
+
+            <!--Material-->
+            <TextBlock Text="Material"/>
+            <TextBox Padding="2"/>
+
+            <!--Manufacturing Info-->
+            <TextBlock Text="Manufacturing Info" FontWeight="Bold" Margin="0 10"/>
+
+            <!--Distribution Centres-->
+            <TextBlock Text="Distribution Centres" Margin="0 0 10 0"/>
+
+            <!--Checkboxes-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--Column 1-->
+                <StackPanel Grid.Column="0" Margin="0 0 0 10">
+                    <CheckBox x:Name="abujaChk" Content="Abuja" Checked="CheckBox_Checked"/>
+                    <CheckBox x:Name="phChk" Content="Port Harcourt" Checked="CheckBox_Checked"/>
+                    <CheckBox x:Name="calabarChk" Content="Calabar" Checked="CheckBox_Checked"/>
+                    <CheckBox x:Name="lagosChk" Content="Lagos" Checked="CheckBox_Checked"/>
+                    <CheckBox x:Name="accraChk" Content="Accra" Checked="CheckBox_Checked"/>
+                </StackPanel>
+
+                <!--Column 2-->
+                <StackPanel Grid.Column="1">
+                    <CheckBox x:Name="abeokutaChk" Content="Abeokuta" Checked="CheckBox_Checked"/>
+                    <CheckBox x:Name="lekkiChk" Content="Lekki(Lagos)" Checked="CheckBox_Checked"/>
+                    <CheckBox x:Name="asabaChk" Content="Asaba" Checked="CheckBox_Checked"/>
+                    <CheckBox x:Name="onitshaChk" Content="Onitsha" Checked="CheckBox_Checked"/>
+                    <CheckBox x:Name="capetownChk" Content="CapeTown" Checked="CheckBox_Checked"/>
+                </StackPanel>
+            </Grid>
+
+            <!--Length-->
+            <TextBlock Text="Length"/>
+            <TextBox x:Name="LengthText" Padding="2"/>
+
+            <!--Mass-->
+            <TextBlock Text="Mass"/>
+            <TextBox Padding="2"/>
+
+            <!--Finish-->
+            <TextBlock Text="Finish"/>
+            <ComboBox SelectedIndex="0"  Padding="2">
+                <ComboBoxItem>Native</ComboBoxItem>
+                <ComboBoxItem>Check</ComboBoxItem>
+                <ComboBoxItem>Jerserye</ComboBoxItem>
+            </ComboBox>
+
+            <!--Purchase Information-->
+            <TextBlock Text="Puchase Info"/>
+            <ComboBox SelectedIndex="0"  Padding="2">
+                <ComboBoxItem>Cash</ComboBoxItem>
+                <ComboBoxItem>Master Card</ComboBoxItem>
+                <ComboBoxItem>Visa</ComboBoxItem>
+            </ComboBox>
+
+            <!--Supplier Name-->
+            <TextBlock Text="Supplier Name"/>
+            <TextBox Padding="2"/>
+
+            <!--Supplier Code-->
+            <TextBlock Text="Supplier Code"/>
+            <TextBox Padding="2"/>
+
+            <TextBlock Text="Additional Info" FontWeight="Bold" Margin="0 10"/>
+
+            <!--Note-->
+            <TextBlock Text="Note"/>
+            <TextBox Padding="2"/>
+
+        </StackPanel>
+    </Border>
+
+</Window>
